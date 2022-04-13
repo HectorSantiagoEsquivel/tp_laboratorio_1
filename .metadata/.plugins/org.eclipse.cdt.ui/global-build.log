@@ -1,13 +1,5 @@
-21:01:15 **** Rebuild of configuration Debug for project TP_1 ****
+23:24:01 **** Incremental Build of configuration Debug for project TP_1 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1.o" "..\\src\\TP_1.c" 
-..\src\TP_1.c: In function 'main':
-..\src\TP_1.c:29:8: warning: variable 'kmLatam' set but not used [-Wunused-but-set-variable]
-   29 |  float kmLatam;
-      |        ^~~~~~~
-..\src\TP_1.c:28:8: warning: variable 'kmAero' set but not used [-Wunused-but-set-variable]
-   28 |  float kmAero;
-      |        ^~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\calculos.o" "..\\src\\calculos.c" 
 gcc -o TP_1.exe "src\\TP_1.o" "src\\calculos.o" 
 Info: Nothing to build for TP_1

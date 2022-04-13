@@ -66,10 +66,9 @@ int main(void) {
 					kmAero=precioAero/km;
 					kmLatam=precioLatam/km;
 					flag=1;
-					printf("\nCalculando resultados\n");
 				}else
 				{
-					printf("\nAntes de calcular por favor ingrese distancia y precio\n");
+					printf("Antes de calcular por favor ingrese distancia y precio");
 				}
 				break;
 			case 4:
@@ -90,14 +89,11 @@ int main(void) {
 
 				}else
 				{
-					printf("\nAntes de mostrar datos debe calcular(Opcion 3)\n");
+					printf("Antes de mostrar datos debe calcular(Opcion 3)");
 				}
 				break;
 			case 5:
-				km=790;
-				precioLatam=162965;
-				precioAero=159339;
-				printf("\nLa carga forzada se realizo con exito\n");
+				printf("%.2f", 37.777777);
 				break;
 			case 6:
 				printf("Programa Finalizado");

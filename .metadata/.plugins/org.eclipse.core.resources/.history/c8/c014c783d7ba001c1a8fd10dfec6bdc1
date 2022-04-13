@@ -97,7 +97,6 @@ int main(void) {
 				km=790;
 				precioLatam=162965;
 				precioAero=159339;
-				printf("\nLa carga forzada se realizo con exito\n");
 				break;
 			case 6:
 				printf("Programa Finalizado");

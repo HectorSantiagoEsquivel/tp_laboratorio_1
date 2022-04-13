@@ -18,7 +18,6 @@ int main(void) {
 	system("CLS");
 
 	int opcion;
-	int flag=0;
 	int km=0;
 	float precioAero;
 	float precioLatam=0;
@@ -35,7 +34,7 @@ int main(void) {
 	while(opcion!=6)
 	{
 		printf("\n1-Ingresar Kilometros: %d\n"
-				"2-Ingresar Precios: Aerolineas = %.2f Latam = %.2f\n"
+				"2-Ingresar Precios: Aerolineas = %f Latam = %f\n"
 				"3-Calcular todos los costos\n"
 				"4-Informar resultados\n"
 				"5-Carga Forzada\n"
@@ -57,7 +56,7 @@ int main(void) {
 				break;
 			case 3:
 
-				if(precioAero!=0 && precioLatam!=0 && km!=0)
+				if(precioAero!=0&&precioLatam!=0&&km!=0)
 				{
 					descuento(precioAero, precioLatam, &descuentoAero, &descuentoLatam);
 					interes(precioAero, precioLatam, &interesAero, &interesLatam);
@@ -65,39 +64,17 @@ int main(void) {
 					bitcoin(precioAero, precioLatam, &bitAero, &bitLatam);
 					kmAero=precioAero/km;
 					kmLatam=precioLatam/km;
-					flag=1;
-					printf("\nCalculando resultados\n");
 				}else
 				{
-					printf("\nAntes de calcular por favor ingrese distancia y precio\n");
+					printf("Antes de calcular por favor ingrese kilometros y precio");
 				}
 				break;
 			case 4:
 
-				if(flag==1){
-					printf("\nKilometros Ingresados: %d"
-							"\nLatam:\n"
-							"a) Precio con tarjeta de débito: %.2f\n"
-							"b) Precio con tarjeta de crédito: %.2f\n"
-							"c) Precio pagando con bitcoin : %.2f\n"
-							"d) Precio unitario: %.2f\n"
-							"\nAerolíneas:\n"
-							"a) Precio con tarjeta de débito: %.2f\n"
-							"b) Precio con tarjeta de crédito: %.2f\n"
-							"c) Precio pagando con bitcoin : %.2f\n"
-							"d) Precio unitario: %.2f\n"
-							"La diferencia de precio es : %.2f", km, descuentoLatam, interesLatam, bitLatam, kmLatam, descuentoAero, interesAero, bitAero,kmAero, diferenciaVar);
+				printf("La diferencia es %f", diferenciaVar);
 
-				}else
-				{
-					printf("\nAntes de mostrar datos debe calcular(Opcion 3)\n");
-				}
 				break;
 			case 5:
-				km=790;
-				precioLatam=162965;
-				precioAero=159339;
-				printf("\nLa carga forzada se realizo con exito\n");
 				break;
 			case 6:
 				printf("Programa Finalizado");
