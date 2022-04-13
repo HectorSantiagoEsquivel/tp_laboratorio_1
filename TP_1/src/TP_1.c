@@ -1,0 +1,84 @@
+/*
+ ============================================================================
+ Name        : TP_1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "calculos.h"
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+	system("CLS");
+
+	int opcion;
+	int km=0;
+	float precioAero;
+	float precioLatam=0;
+	float descuentoAero=0;
+	float descuentoLatam;
+	float interesAero;
+	float interesLatam;
+	float kmAero;
+	float kmLatam;
+	float bitAero;
+	float bitLatam;
+	float diferenciaVar;
+
+	while(opcion!=6)
+	{
+		printf("\n1-Ingresar Kilometros: %d\n"
+				"2-Ingresar Precios: Aerolineas = %f Latam = %f\n"
+				"3-Calcular todos los costos\n"
+				"4-Informar resultados\n"
+				"5-Carga Forzada\n"
+				"6-Finalizar\n", km, precioAero, precioLatam);
+
+		printf("Ingrese el numero de opcion");
+		scanf("%d", &opcion);
+		switch(opcion)
+		{
+			case 1:
+				printf("Ingrese los Kilometros");
+				scanf("%d", &km);
+				break;
+			case 2:
+				printf("Ingrese el precio de Aerolineas");
+				scanf("%f", &precioAero);
+				printf("Ingrese el precio de Latam");
+				scanf("%f", &precioLatam);
+				break;
+			case 3:
+
+				descuento(precioAero, precioLatam, &descuentoAero, &descuentoLatam);
+				interes(precioAero, precioLatam, &interesAero, &interesLatam);
+				diferencia(precioAero, precioLatam, &diferenciaVar);
+				bitcoin(precioAero, precioLatam, &bitAero, &bitLatam);
+				kmAero=precioAero/km;
+				kmLatam=precioLatam/km;
+
+				break;
+			case 4:
+
+				printf("La diferencia es %f", diferenciaVar);
+
+				break;
+			case 5:
+				break;
+			case 6:
+				printf("Programa Finalizado");
+				break;
+			default:
+				printf("Por favor ingrese una opcion valida");
+
+		}
+	}
+
+	return 0;
+}
