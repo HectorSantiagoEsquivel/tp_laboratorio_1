@@ -577,7 +577,7 @@ LinkedList* ll_filter(LinkedList* this, int(*fn)(void*))
 {
 	LinkedList* pLinkedListFilter=NULL;
 
-	if(this!=NULL&&fn!=NULL&&pLinkedListFilter)
+	if(this!=NULL&&fn!=NULL)
 	{
 		pLinkedListFilter=ll_newLinkedList();
 		if(pLinkedListFilter!=NULL)
