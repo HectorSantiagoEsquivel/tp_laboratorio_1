@@ -10,6 +10,11 @@
 #include "Passenger.h"
 #include "LinkedList.h"
 
+/**
+ * @brief this function creates a new passenger through dynamic memory
+ * @return
+ */
+
 Passenger* Passenger_new(){
 
 	Passenger* pPassenger;
@@ -18,6 +23,13 @@ Passenger* Passenger_new(){
 	return pPassenger;
 
 }
+
+/**
+ * @brief sets the id of the passenger on the given structure
+ * @param this
+ * @param id
+ * @return
+ */
 
 int Passenger_setId(Passenger* this,int id){
 	int retorno=-1;
@@ -33,6 +45,14 @@ int Passenger_setId(Passenger* this,int id){
 	return retorno;
 
 }
+
+/**
+ * @brief gets the id of the passenger from the given structure
+ * @param this
+ * @param id
+ * @return
+ */
+
 int Passenger_getId(Passenger* this,int* id){
 
 	int retorno=-1;
@@ -48,6 +68,13 @@ int Passenger_getId(Passenger* this,int* id){
 	return retorno;
 
 }
+
+/**
+ * @brief sets the name of the passenger on the given structure
+ * @param this
+ * @param nombre
+ * @return
+ */
 
 int Passenger_setNombre(Passenger* this,char* nombre){
 
@@ -66,6 +93,13 @@ int Passenger_setNombre(Passenger* this,char* nombre){
 
 }
 
+/**
+ * @brief gets the name of the passenger from the given structure
+ * @param this
+ * @param nombre
+ * @return
+ */
+
 int Passenger_getNombre(Passenger* this,char* nombre){
 
 	int retorno=-1;
@@ -81,6 +115,13 @@ int Passenger_getNombre(Passenger* this,char* nombre){
 	return retorno;
 
 }
+
+/**
+ * @brief sets the surname of the passenger on the given structure
+ * @param this
+ * @param apellido
+ * @return
+ */
 
 int Passenger_setApellido(Passenger* this,char* apellido){
 
@@ -99,6 +140,13 @@ int Passenger_setApellido(Passenger* this,char* apellido){
 
 }
 
+/**
+ * @brief gets the surname of the passenger from the given structure
+ * @param this
+ * @param apellido
+ * @return
+ */
+
 int Passenger_getApellido(Passenger* this,char* apellido){
 
 	int retorno=-1;
@@ -114,6 +162,13 @@ int Passenger_getApellido(Passenger* this,char* apellido){
 	return retorno;
 
 }
+
+/**
+ * @brief sets the flycode of the passenger on the given structure
+ * @param this
+ * @param codigoVuelo
+ * @return
+ */
 
 int Passenger_setCodigoVuelo(Passenger* this,char* codigoVuelo){
 
@@ -132,6 +187,13 @@ int Passenger_setCodigoVuelo(Passenger* this,char* codigoVuelo){
 
 }
 
+/**
+ * @brief gets the flycode of the passenger from the given structure
+ * @param this
+ * @param codigoVuelo
+ * @return
+ */
+
 int Passenger_getCodigoVuelo(Passenger* this,char* codigoVuelo){
 
 	int retorno=-1;
@@ -148,6 +210,13 @@ int Passenger_getCodigoVuelo(Passenger* this,char* codigoVuelo){
 
 }
 
+/**
+ * @brief sets the type of the passenger on the given structure
+ * @param this
+ * @param tipoPasajero
+ * @return
+ */
+
 int Passenger_setTipoPasajero(Passenger* this,int tipoPasajero){
 	int retorno=-1;
 
@@ -162,6 +231,13 @@ int Passenger_setTipoPasajero(Passenger* this,int tipoPasajero){
 	return retorno;
 
 }
+
+/**
+ * @brief gets the type of the passenger from the given structure
+ * @param this
+ * @param tipoPasajero
+ * @return
+ */
 int Passenger_getTipoPasajero(Passenger* this,int* tipoPasajero){
 
 	int retorno=-1;
@@ -178,6 +254,13 @@ int Passenger_getTipoPasajero(Passenger* this,int* tipoPasajero){
 
 }
 
+/**
+ * @brief sets the price of the flight on the given structure
+ * @param this
+ * @param precio
+ * @return
+ */
+
 int Passenger_setPrecio(Passenger* this,float precio)
 {
 	int retorno=-1;
@@ -193,6 +276,13 @@ int Passenger_setPrecio(Passenger* this,float precio)
 	return retorno;
 
 }
+
+/**
+ * @brief gets the price of the flight from the given structure
+ * @param this
+ * @param precio
+ * @return
+ */
 int Passenger_getPrecio(Passenger* this,float* precio)
 {
 
@@ -209,6 +299,12 @@ int Passenger_getPrecio(Passenger* this,float* precio)
 	return retorno;
 
 }
+
+/**
+ * @brief shows the passenger list
+ * @param this
+ * @return
+ */
 
 int Passenger_showPassengerList(LinkedList* this)
 {
@@ -240,6 +336,13 @@ int Passenger_showPassengerList(LinkedList* this)
 
 }
 
+/**
+ * @brief shows a single passenger
+ * @param this
+ * @param showHeader
+ * @return
+ */
+
 int Passenger_showPassenger(Passenger* this, int showHeader)
 {
 
@@ -267,6 +370,12 @@ int Passenger_showPassenger(Passenger* this, int showHeader)
 	}
 	return retorno;
 }
+
+/**
+ * @brief allows the modification of the fields of the given passenger structure
+ * @param pPassenger
+ * @return
+ */
 
 int Passenger_modifyPassenger(Passenger* pPassenger){
 
@@ -367,6 +476,13 @@ int Passenger_modifyPassenger(Passenger* pPassenger){
 	return retorno;
 }
 
+/**
+ * @brief removes the given passenger
+ * @param this
+ * @param index
+ * @return
+ */
+
 int Passenger_removePassenger(LinkedList* this, int index)
 {
 	int retorno = -1;
@@ -413,6 +529,13 @@ int Passenger_removePassenger(LinkedList* this, int index)
 
 }
 
+/**
+ * @brief compares two passengers through id
+ * @param pElementOne
+ * @param pElementTwo
+ * @return
+ */
+
 int Passenger_sortbyID(void* pElementOne, void* pElementTwo)//utilizamos la variable order para saber como queremos ordenar el array
 {
 	int retorno = 0;
@@ -440,6 +563,13 @@ int Passenger_sortbyID(void* pElementOne, void* pElementTwo)//utilizamos la vari
 	return retorno;
 
 }
+
+/**
+ * @brief compares two passengers through name
+ * @param pElementOne
+ * @param pElementTwo
+ * @return
+ */
 
 int Passenger_sortbyName(void* pElementOne, void* pElementTwo)//utilizamos la variable order para saber como queremos ordenar el array
 {
@@ -469,6 +599,13 @@ int Passenger_sortbyName(void* pElementOne, void* pElementTwo)//utilizamos la va
 
 }
 
+/**
+ * @brief compares two passengers through surname
+ * @param pElementOne
+ * @param pElementTwo
+ * @return
+ */
+
 int Passenger_sortbySurname(void* pElementOne, void* pElementTwo)//utilizamos la variable order para saber como queremos ordenar el array
 {
 	int retorno = 0;
@@ -496,6 +633,13 @@ int Passenger_sortbySurname(void* pElementOne, void* pElementTwo)//utilizamos la
 	return retorno;
 
 }
+
+/**
+ * @brief compares two passengers through price
+ * @param pElementOne
+ * @param pElementTwo
+ * @return
+ */
 
 int Passenger_sortbyPrice(void* pElementOne, void* pElementTwo)//utilizamos la variable order para saber como queremos ordenar el array
 {
@@ -525,6 +669,13 @@ int Passenger_sortbyPrice(void* pElementOne, void* pElementTwo)//utilizamos la v
 
 }
 
+/**
+ * @brief compares two passengers through type
+ * @param pElementOne
+ * @param pElementTwo
+ * @return
+ */
+
 int Passenger_sortbyType(void* pElementOne, void* pElementTwo)//utilizamos la variable order para saber como queremos ordenar el array
 {
 	int retorno = 0;
@@ -553,6 +704,13 @@ int Passenger_sortbyType(void* pElementOne, void* pElementTwo)//utilizamos la va
 
 }
 
+/**
+ * @brief returns the index of the passenger with the correct ID
+ * @param this
+ * @param submitedID
+ * @return
+ */
+
 int Passenger_findIndexbyID(LinkedList* this, int submitedID)
 {
 	int foundID;
@@ -577,7 +735,11 @@ int Passenger_findIndexbyID(LinkedList* this, int submitedID)
 
 }
 
-
+/**
+ * @brief returns the correct class code given a char
+ * @param class
+ * @return
+ */
 int charClassToInt(char* class)
 {
 	int retorno=-1;
@@ -595,7 +757,12 @@ int charClassToInt(char* class)
 
 	return retorno;
 }
-
+/**
+ * @brief gives the class description from the class code
+ * @param classCode
+ * @param class
+ * @return
+ */
 int intClassToChar(int classCode,char* class)
 {
 	int retorno=-1;
@@ -612,6 +779,12 @@ int intClassToChar(int classCode,char* class)
 	}
 	return retorno;
 }
+
+/**
+ * @brief generates a new id for the passenger
+ * @param this
+ * @return
+ */
 
 int Passenger_getNewID(LinkedList* this)
 {
@@ -637,7 +810,6 @@ int Passenger_getNewID(LinkedList* this)
 
 			}
 			newID=maxID+1;
-			printf("%d",newID);
 		}else
 		{
 			newID=1;
@@ -647,6 +819,13 @@ int Passenger_getNewID(LinkedList* this)
 	return newID;
 
 }
+
+/**
+ * @brief changes the id of previously submitted passengers to accommodate passengers submitted through text;
+ * @param this
+ * @param maxID
+ * @return
+ */
 
 int Passenger_changeIDtoMax(LinkedList* this, int maxID)
 {

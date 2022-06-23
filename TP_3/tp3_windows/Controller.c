@@ -200,12 +200,13 @@ int controller_ListPassenger(LinkedList* pArrayListPassenger)
  */
 int controller_sortPassenger(LinkedList* pArrayListPassenger)
 {
-	int retorno;
+	int retorno=-1;
 	int option;
-	int order=1;
+	int order=0;
 
 	if(pArrayListPassenger!=NULL)
 	{
+		retorno=0;
 		printf("\n1-Ordenar pasajeros por apellido y nombre\n"
 				"2-Ordenar pasajeros por clase y precio de vuelo \n"
 				"3-Ordenar pasajeros por ID\n"
@@ -310,6 +311,14 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListPassenger)
 
     return retorno;
 }
+
+/**
+ * @brief permite cambiar los id de los pasajeros ingresados por alta para que no tengan conflicto con los cargados por archivo
+ * @param path
+ * @param pArrayListPassenger
+ * @param readType
+ * @return
+ */
 
 int controller_changePassengerID(char* path,  LinkedList* pArrayListPassenger, int readType)
 {

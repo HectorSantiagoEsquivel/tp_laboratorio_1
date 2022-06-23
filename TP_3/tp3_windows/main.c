@@ -136,6 +136,10 @@ int main()
             	if(flagTwo==1){
             		printf("Finalizando Programa");
             		ll_deleteLinkedList(listaPasajeros);
+            	}else
+            	{
+            		option=0;
+            		printf("Antes de finalizar el programa guarde un archivo por favor");
             	}
             	break;
         }

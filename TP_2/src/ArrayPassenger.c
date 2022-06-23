@@ -258,7 +258,9 @@ int sortPassengers(Passenger list[], int len, int order)//utilizamos la variable
 	Passenger aux;
 	int isSorted;
 
-	if (list != NULL && len > 0)
+	if(list != NULL && len > 0){
+
+
 		if(order==1){
 			do {
 				isSorted = 1;
@@ -297,11 +299,10 @@ int sortPassengers(Passenger list[], int len, int order)//utilizamos la variable
 			} while (isSorted == 0);//en caso de que order sea 2 lo ordenamos por codigo de vuelo, y el estado que se ingreso. Usando un burbujeo eficiente.
 		}
 		retorno = 0;
-
+	}
 
 	return retorno;
 
-	return 0;
 }
 
 void showPassenger(Passenger registeredPassenger, int showHeader) //utilizamos showPassenger para mostrar solo un empleado

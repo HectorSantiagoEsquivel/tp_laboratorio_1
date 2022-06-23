@@ -92,6 +92,13 @@ int parser_PassengerFromBinary(FILE* pFile , LinkedList* pArrayListPassenger)
 	return retorno;
 }
 
+/**
+ * @brief parsea los datos del archivo de texto desde una linked list con passengers
+ * @param pFile
+ * @param pArrayListPassenger
+ * @return
+ */
+
 int parser_TextFromPassenger(FILE* pFile , LinkedList* pArrayListPassenger)
 {
 	int id;
@@ -108,7 +115,7 @@ int parser_TextFromPassenger(FILE* pFile , LinkedList* pArrayListPassenger)
 	{
 		fprintf(pFile, "%s,%s,%s,%s, %s,%s,%s\n","ID","Name","Surname","Price","FlyCode","Class","StatusFlight");
 
-		for(int i=0;i<=ll_len(pArrayListPassenger);i++)
+		for(int i=0;i<ll_len(pArrayListPassenger);i++)
 		{
 			pPassenger=ll_get(pArrayListPassenger,i);
 
@@ -131,6 +138,13 @@ int parser_TextFromPassenger(FILE* pFile , LinkedList* pArrayListPassenger)
     return 1;
 }
 
+/**
+ * @brief parsea los datos del archivo binario desde una linked list con passengers
+ * @param pFile
+ * @param pArrayListPassenger
+ * @return
+ */
+
 
 int parser_BinaryFromPassenger(FILE* pFile , LinkedList* pArrayListPassenger)
 {
@@ -139,7 +153,7 @@ int parser_BinaryFromPassenger(FILE* pFile , LinkedList* pArrayListPassenger)
 
 	if(pFile!=NULL&&pArrayListPassenger!=NULL)
 	{
-		for(int i=0;i<=ll_len(pArrayListPassenger);i++)
+		for(int i=0;i<ll_len(pArrayListPassenger);i++)
 		{
 			pPassenger=ll_get(pArrayListPassenger,i);
 			fwrite(pPassenger,sizeof(Passenger),1,pFile);
@@ -148,6 +162,12 @@ int parser_BinaryFromPassenger(FILE* pFile , LinkedList* pArrayListPassenger)
 
 	return retorno;
 }
+
+/**
+ * @brief obtiene un id maximo desde un archivo de texto
+ * @param pFile
+ * @return
+ */
 
 int parser_maxIDFromText(FILE* pFile)
 {
@@ -186,6 +206,12 @@ int parser_maxIDFromText(FILE* pFile)
 
     return maxID;
 }
+
+/**
+ * @brief obtiene un id maximo desde un archivo binario
+ * @param pFile
+ * @return
+ */
 
 int parser_maxIDFromBinary(FILE* pFile)
 {
